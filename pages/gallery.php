@@ -1,7 +1,7 @@
 <h2>Gallery</h2>
 <form action='index.php?page=3' method='post'>
     <p>Select graphics extension to display:</p>
-    <select name='ext'>
+    <select class="form-select-sm" name='ext'>
         <?php
         $path = 'images/';
         if($dir = opendir($path))
@@ -38,7 +38,7 @@ if(isset($_POST['submit']))
     foreach ($ar as $a)
     {
         echo "<a href='" . $a . "' target='_blank'>
-                  <img src='" . $a . "' height='100px' border='0'
+                  <img src='" . $a . "' height='100px'
                   alt='picture' class='img-polaroid'/>
             </a>";
     }

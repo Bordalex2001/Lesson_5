@@ -39,6 +39,9 @@
                             include_once('pages\gallery.php');
                             break;
                         case 4:
+                            include_once('pages\login.php');
+                            break;
+                        case 5:
                             include_once('pages\registration.php');
                             break;
                     }
