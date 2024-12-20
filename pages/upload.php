@@ -1,6 +1,6 @@
 <h3>Upload Form</h3>
 <?php
-if($_SESSION['login'] == '')
+if(!isset($_SESSION['login']))
 {
     header('location: index.php?page=4');
     exit;

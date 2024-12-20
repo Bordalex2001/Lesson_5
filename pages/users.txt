@@ -1,1 +1,2 @@
-admin:81dc9bdb52d04dc20036dbd8313ed055:admin@gmail.com
+admin:$2y$12$ZTj8EZpdME1NtjrKExEowOGtkeKe70EMgA86ggNFyrEgeM1bTzhx2:admin@gmail.com
+alex:$2y$12$HjZZpud4hjyR.I1dtoq.G.F.jIqxIDuFsLhqyFrmhPzA23atcNOYy:alex@gmail.com

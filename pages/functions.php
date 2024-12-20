@@ -33,7 +33,7 @@ function register($name, $pass, $email) : bool
         }
     }
     //new user adding block
-    $line=$name.':'.md5($pass).':'.$email."\r\n";
+    $line=$name.':'.password_hash($pass, PASSWORD_DEFAULT).':'.$email."\r\n";
     fputs($file,$line);
     fclose($file);
     return true;
@@ -55,11 +55,11 @@ function login($name, $pass) : bool
     $isAuth=false;
 
     while($line=fgets($file, 128)){
-        $readname=substr($line,0,strpos($line,':'));
-        $readpass=trim(substr($line,strpos($line,':')+1));
+        $data = explode(":",$line);
+        $readname=$data[0];
+        $readpass=$data[1];
         if($readname == $name && password_verify($pass,$readpass))
         {
-            session_start();
             $_SESSION['login'] = $name;
 
             $isAuth=true;
